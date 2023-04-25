@@ -1,0 +1,19 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Simple todo app using mern stack",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Keshav Jagannath",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
