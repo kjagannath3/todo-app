@@ -46,9 +46,10 @@ app.post('/todos/new', (req, res) => {
      const todo = await Todo.findById(req.params.id);
      todo.complete = !todo.complete
 
-     todo.save()
-
-     res.status(201);
+    res.status(201)
+    todo.save();
+    
+    res.json(todo);
 
 
  })
