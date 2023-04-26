@@ -39,6 +39,7 @@ app.post('/todos/new', (req, res) => {
     const result = await Todo.findByIdAndDelete(req.params.id);
 
     res.statusCode = 204;
+    res.json(result)
  })  
  
 app.listen(3001, () => console.log("Server started on port 3001"));
