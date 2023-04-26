@@ -41,5 +41,16 @@ app.post('/todos/new', (req, res) => {
     res.statusCode = 204;
     res.json(result)
  })  
+
+ app.put('/todos/complete/:id', async (req, res) => {
+     const todo = await Todo.findById(req.params.id);
+     todo.complete = !todo.complete
+
+     todo.save()
+
+     res.json(todo);
+
+
+ })
  
 app.listen(3001, () => console.log("Server started on port 3001"));
