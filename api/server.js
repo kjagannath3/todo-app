@@ -48,7 +48,7 @@ app.post('/todos/new', (req, res) => {
 
      todo.save()
 
-     res.json(todo);
+     res.status(201);
 
 
  })
